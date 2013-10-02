@@ -3,7 +3,7 @@
 A very basic example for using Stripe together with Padrino. Nothing fancy at all -- the absolute minimal
 code.
 
-![Screenshot](https://raw.github.com/k2052/middleman-ebook/master/screenshot.png)
+![Screenshot](https://raw.github.com/k2052/stripe.padrino/master/screenshot.png)
 
 ## Usage
 
