@@ -1,0 +1,26 @@
+doctype 5
+html lang="en" 
+  head
+    meta charset="UTF-8"
+    title Stripe Padrino Demo App
+    == stylesheet_link_tag 'app.css'
+    == javascript_include_tag 'app.js'
+  body
+    navbar.navbar-default.navbar-fixed-top
+      .navbar-inner
+        .container  
+          .navbar-header
+            a.navbar-brand href==url(:main, :index) Stripe Padrino
+          .collapse.navbar-collapse.navbar-ex5-collapse
+            ul.nav.navbar-nav
+              - unless current_account
+                li
+                  a href="auth/github" Sign In With Github
+    .main.container
+      .row
+        .span6.columns
+          - if flash[:notice]
+            .alert.alert-success== flash[:notice]
+          - elsif flash[:error]
+            .alert.alert-danger== flash[:error]
+      == yield
